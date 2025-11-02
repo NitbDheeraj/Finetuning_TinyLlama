@@ -1,0 +1,3114 @@
+{
+  "metrics": {
+    "exact_match_accuracy": 0.35,
+    "structure_match_accuracy": 0.45,
+    "average_key_overlap": 0.45,
+    "total_samples": 100
+  },
+  "detailed_results": [
+    {
+      "instruction": "Show the top 5 employees where salary greater than 37",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "salary",
+            "operator": ">",
+            "value": 37
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "salary"
+      },
+      "generated": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "salary",
+            "operator": ">",
+            "value": 37
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "salary"
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"salary\",\n      \"operator\": \">\",\n      \"value\": 37\n    }\n  ],\n  \"limit\": 5,\n  \"order\": \"desc\",\n  \"order_by\": \"salary\"\n}"
+    },
+    {
+      "instruction": "Show the  customers where city is Mumbai and total_spent greater than 19 and age below 54",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Mumbai"
+          },
+          {
+            "field": "total_spent",
+            "operator": ">",
+            "value": 19
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 54
+          }
+        ]
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Mumbai"
+          },
+          {
+            "field": "total_spent",
+            "operator": ">",
+            "value": 19
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 54
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n    \"entity\": \"customers\",\n    \"conditions\": [\n      {\n        \"field\": \"city\",\n        \"operator\": \"=\",\n        \"value\": \"Mumbai\"\n      },\n      {\n        \"field\": \"total_spent\",\n        \"operator\": \">\",\n        \"value\": 19\n      },\n      {\n        \"field\": \"age\",\n        \"operator\": \"<\",\n        \"value\": 54\n      }\n    ]\n  }\n\n5. **"
+    },
+    {
+      "instruction": "Show the minimum products where price greater than 47 and category is electronics",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "price",
+            "operator": ">",
+            "value": 47
+          },
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "electronics"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "price",
+            "operator": ">",
+            "value": 47
+          },
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "electronics"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"price\",\n      \"operator\": \">\",\n      \"value\": 47\n    },\n    {\n      \"field\": \"category\",\n      \"operator\": \"=\",\n      \"value\": \"electronics\"\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  customers where membership_status is active and membership_status is completed and total_spent less than 50",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "active"
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "completed"
+          },
+          {
+            "field": "total_spent",
+            "operator": "<",
+            "value": 50
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"active\"\n    },\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"completed\"\n    },\n    {\n      \"field\": \"total_spent\",\n      \"operator\": \"<\",\n      \"value\": 50\n    }\n  ]\n}\n```\n\n4. Query with multiple conditions:\n\n```\n$graphql = \"\n  {\n    customers {\n      id\n      name\n      membership_status\n      membership_status\n      total_spent\n    }\n  }\n  \";\n\n  $results = $client->query($graphql);\n\n  var_dump($results);\n```\n\nOutput:\n```\narray(2) {\n  [0]=>\n  array(2) {\n    [0]=>\n    array(2) {\n      [0]=>\n      array(2)"
+    },
+    {
+      "instruction": "Show the  transactions where amount below 96",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "amount",
+            "operator": "<",
+            "value": 96
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"transactions\",\n  \"conditions\": ["
+    },
+    {
+      "instruction": "Show the  employees where department is HR",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "department",
+            "operator": "=",
+            "value": "HR"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"department\",\n      \"operator\": \"=\",\n      \"value\": 20\n    },\n    {\n      \"field\": \"department\",\n      \"operator\": \"=\",\n      \"value\": 20\n    },"
+    },
+    {
+      "instruction": "Show the  accounts where balance less than 62",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "balance",
+            "operator": "<",
+            "value": 62
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"balance\",\n      \"operator\": \"<\",\n      \"value\": 100\n    },\n    {\n      \"field\": \"balance\",\n      \"operator\": \"<\",\n      \"value"
+    },
+    {
+      "instruction": "Show the  customers where join_date after 2022-09-15",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "join_date",
+            "operator": ">",
+            "value": "2022-09-15"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n    \"entity\": \"customers\",\n    \"conditions\": [\n      {\n        \"field"
+    },
+    {
+      "instruction": "Show the  products where launch_date between 2020-03-02 and 2020-12-15 and price equal to 48 and launch_date between 2021-08-25 and 2021-09-24",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "launch_date",
+            "operator": "between",
+            "value": [
+              "2020-03-02",
+              "2020-12-15"
+            ]
+          },
+          {
+            "field": "price",
+            "operator": "=",
+            "value": 48
+          },
+          {
+            "field": "launch_date",
+            "operator": "between",
+            "value": [
+              "2021-08-25",
+              "2021-09-24"
+            ]
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"launch_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2020-03-02\",\n        \"2020-12-15\""
+    },
+    {
+      "instruction": "Show the  employees where department is Sales",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "department",
+            "operator": "=",
+            "value": "Sales"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"department\",\n      \"operator\": \"=\",\n      \"value\": \"Sales\"\n    },"
+    },
+    {
+      "instruction": "Show the  employees where age above 74 and salary equal to 26 and designation less than 43",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": ">",
+            "value": 74
+          },
+          {
+            "field": "salary",
+            "operator": "=",
+            "value": 26
+          },
+          {
+            "field": "designation",
+            "operator": "<",
+            "value": 43
+          }
+        ]
+      },
+      "generated": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": ">",
+            "value": 74
+          },
+          {
+            "field": "salary",
+            "operator": "=",
+            "value": 26
+          },
+          {
+            "field": "salary",
+            "operator": "<",
+            "value": 43
+          }
+        ]
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"age\",\n      \"operator\": \">\",\n      \"value\": 74\n    },\n    {\n      \"field\": \"salary\",\n      \"operator\": \"=\",\n      \"value\": 26\n    },\n    {\n      \"field\": \"salary\",\n      \"operator\": \"<\",\n      \"value\": 43\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  accounts where balance greater than 91 and account_type less than 94",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 91
+          },
+          {
+            "field": "account_type",
+            "operator": "<",
+            "value": 94
+          }
+        ]
+      },
+      "generated": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 91
+          },
+          {
+            "field": "account_type",
+            "operator": "<",
+            "value": 94
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"balance\",\n      \"operator\": \">\",\n      \"value\": 91\n    },\n    {\n      \"field\": \"account_type\",\n      \"operator\": \"<\",\n      \"value\": 94\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  orders where status is inactive",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "status",
+            "operator": "=",
+            "value": "inactive"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "```\n  {\n    \"entity\": \"orders\",\n    \"conditions"
+    },
+    {
+      "instruction": "Show the  transactions where account_id not equal to 55 and type greater than 84",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 55
+          },
+          {
+            "field": "type",
+            "operator": ">",
+            "value": 84
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"transactions\",\n  \"conditions\": ["
+    },
+    {
+      "instruction": "Show the  customers where city is Delhi and age less than 76",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Delhi"
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 76
+          }
+        ]
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Delhi"
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 76
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"city\",\n      \"operator\": \"=\",\n      \"value\": \"Delhi\"\n    },\n    {\n      \"field\": \"age\",\n      \"operator\": \"<\",\n      \"value\": 76\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  products where price not equal to 89 and price equal to 85",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "price",
+            "operator": "=",
+            "value": 89
+          },
+          {
+            "field": "price",
+            "operator": "=",
+            "value": 85
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n    \"entity\": \"orders\",\n    \"conditions\": [\n      {\n        \"field\": \"customer_id\",\n        \"operator\": \"=\",\n        \"value\": 1\n      },\n      {\n        \"field\": \"date"
+    },
+    {
+      "instruction": "Show the  accounts where branch above 12",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "branch",
+            "operator": ">",
+            "value": 12
+          }
+        ]
+      },
+      "generated": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 43,
+            "entity": "branch"
+          },
+          {
+            "field": "branch",
+            "operator": "=",
+            "value": 12
+          }
+        ]
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"balance\",\n      \"operator\": \">\",\n      \"value\": 43,\n      \"entity\": \"branch\"\n    },\n    {\n      \"field\": \"branch\",\n      \"operator\": \"=\",\n      \"value\": 12\n    }\n  ]\n}\n```\n\n6. Accounts where balance is greater"
+    },
+    {
+      "instruction": "Show the  accounts where open_date between 2025-01-13 and 2025-03-31",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "open_date",
+            "operator": "between",
+            "value": [
+              "2025-01-13",
+              "2025-03-31"
+            ]
+          }
+        ]
+      },
+      "generated": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "open_date",
+            "operator": "=",
+            "value": "2025-03-09"
+          }
+        ]
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"open_date\",\n      \"operator\": \"=\",\n      \"value\": \"2025-03-09\"\n    }\n  ]\n}\n\n6. `"
+    },
+    {
+      "instruction": "Show the  orders where customer_id less than 65",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "customer_id",
+            "operator": "<",
+            "value": 65
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"customer_id\",\n      \"operator\": \">\",\n      \"value\": 3"
+    },
+    {
+      "instruction": "Show the  products where stock equal to 81 and launch_date between 2018-08-17 and 2019-02-27",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "stock",
+            "operator": "=",
+            "value": 81
+          },
+          {
+            "field": "launch_date",
+            "operator": "between",
+            "value": [
+              "2018-08-17",
+              "2019-02-27"
+            ]
+          }
+        ]
+      },
+      "generated": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "stock",
+            "operator": "=",
+            "value": 81
+          },
+          {
+            "field": "launch_date",
+            "operator": "between",
+            "value": [
+              "2018-08-17",
+              "2019-02-27"
+            ]
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"stock\",\n      \"operator\": \"=\",\n      \"value\": 81\n    },\n    {\n      \"field\": \"launch_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2018-08-17\",\n        \"2019-02-27\"\n      ]\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  customers where membership_status is active and age greater than 16",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "active"
+          },
+          {
+            "field": "age",
+            "operator": ">",
+            "value": 16
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \""
+    },
+    {
+      "instruction": "Show the  products where price greater than 87 and launch_date between 2015-04-04 and 2015-05-12 and category is toys",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "price",
+            "operator": ">",
+            "value": 87
+          },
+          {
+            "field": "launch_date",
+            "operator": "between",
+            "value": [
+              "2015-04-04",
+              "2015-05-12"
+            ]
+          },
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "toys"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "price",
+            "operator": ">",
+            "value": 87
+          },
+          {
+            "field": "launch_date",
+            "operator": "between",
+            "value": [
+              "2015-04-04",
+              "2015-05-12"
+            ]
+          },
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "toys"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"price\",\n      \"operator\": \">\",\n      \"value\": 87\n    },\n    {\n      \"field\": \"launch_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2015-04-04\",\n        \"2015-05-12\"\n      ]\n    },\n    {\n      \"field\": \"category\",\n      \"operator\": \"=\",\n      \"value\": \"toys\"\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  employees where hire_date between 2015-04-13 and 2015-11-12 and salary greater than 19 and age less than 11",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "hire_date",
+            "operator": "between",
+            "value": [
+              "2015-04-13",
+              "2015-11-12"
+            ]
+          },
+          {
+            "field": "salary",
+            "operator": ">",
+            "value": 19
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 11
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"hire_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2015-04-1"
+    },
+    {
+      "instruction": "Show the  customers where city is Chennai",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Chennai"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \""
+    },
+    {
+      "instruction": "Show the maximum products where stock less than 83 and launch_date between 2023-12-04 and 2024-08-10 and price greater than 32",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "stock",
+            "operator": "<",
+            "value": 83
+          },
+          {
+            "field": "launch_date",
+            "operator": "between",
+            "value": [
+              "2023-12-04",
+              "2024-08-10"
+            ]
+          },
+          {
+            "field": "price",
+            "operator": ">",
+            "value": 32
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "```\n{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"stock\",\n      \"operator\": \"<\",\n      \"value\": 15\n    },\n    {\n      \"field\": \"launch_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2023-01-01\",\n        \"2023-12-31\"\n      ]"
+    },
+    {
+      "instruction": "Show the maximum accounts where account_type less than 51",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "account_type",
+            "operator": "<",
+            "value": 51
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "**\n```\n{\n  \"entity"
+    },
+    {
+      "instruction": "Show the  employees where age equal to 65 and age less than 85 and designation equal to 41",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": "=",
+            "value": 65
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 85
+          },
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 41
+          }
+        ]
+      },
+      "generated": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": "=",
+            "value": 65
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 85
+          },
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 41
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"age\",\n      \"operator\": \"=\",\n      \"value\": 65\n    },\n    {\n      \"field\": \"age\",\n      \"operator\": \"<\",\n      \"value\": 85\n    },\n    {\n      \"field\": \"designation\",\n      \"operator\": \"=\",\n      \"value\": 41\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  accounts where open_date after 2017-07-28 and open_date after 2023-09-19 and account_type greater than 71",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "open_date",
+            "operator": ">",
+            "value": "2017-07-28"
+          },
+          {
+            "field": "open_date",
+            "operator": ">",
+            "value": "2023-09-19"
+          },
+          {
+            "field": "account_type",
+            "operator": ">",
+            "value": 71
+          }
+        ]
+      },
+      "generated": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "account_type",
+            "operator": ">",
+            "value": 19
+          },
+          {
+            "field": "account_type",
+            "operator": "=",
+            "value": 94
+          }
+        ]
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"account_type\",\n      \"operator\": \">\",\n      \"value\": 19\n    },\n    {\n      \"field\": \"account_type\",\n      \"operator\": \"=\",\n      \"value\": 94\n    }\n  ]\n}\n```"
+    },
+    {
+      "instruction": "Show the  employees where designation not equal to 77",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 77
+          }
+        ]
+      },
+      "generated": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 77
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"designation\",\n      \"operator\": \"=\",\n      \"value\": 77\n    }\n  ]\n}\n```\n\n### 59. Show employees where department is HR and designation is 15 \n\n**Request**:\n\n```\n$ curl -X GET http://localhost:5000/v1/employees \\\n  -H 'Authorization: JWT eyJhbGdlIjozNjE2NzUmIjozNjE2NzUmIjozNjE2NzUmI'\n```\n\n**Response**:\n```\n{\n  \"entity\": \"employees\",\n  \"conditions\": ["
+    },
+    {
+      "instruction": "Show the bottom 5 products where stock above 48 and launch_date between 2024-06-14 and 2025-03-13 and price below 45",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "stock",
+            "operator": ">",
+            "value": 48
+          },
+          {
+            "field": "launch_date",
+            "operator": "between",
+            "value": [
+              "2024-06-14",
+              "2025-03-13"
+            ]
+          },
+          {
+            "field": "price",
+            "operator": "<",
+            "value": 45
+          }
+        ],
+        "limit": 5,
+        "order": "asc",
+        "order_by": "stock"
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"stock\",\n      \"operator\": \">\",\n      \"value\": 48\n    },\n    {\n      \"field\": \"launch_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2024-06-"
+    },
+    {
+      "instruction": "Show the  transactions where date between 2017-01-30 and 2017-09-16 and amount below 36 and date after 2015-07-21",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "date",
+            "operator": "between",
+            "value": [
+              "2017-01-30",
+              "2017-09-16"
+            ]
+          },
+          {
+            "field": "amount",
+            "operator": "<",
+            "value": 36
+          },
+          {
+            "field": "date",
+            "operator": ">",
+            "value": "2015-07-21"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"transactions\",\n  \"conditions\": [\n    {\n      \"field\": \"date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2017-01-30\",\n        \"2017-09-16\"\n      ]\n    },\n    {\n      \"field\": \"amount\",\n      \"operator\": \"<\",\n      \"value\": 36"
+    },
+    {
+      "instruction": "Show the  transactions where account_id not equal to 14 and type greater than 31",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 14
+          },
+          {
+            "field": "type",
+            "operator": ">",
+            "value": 31
+          }
+        ]
+      },
+      "generated": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 14
+          },
+          {
+            "field": "type",
+            "operator": ">",
+            "value": 31
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"transactions\",\n  \"conditions\": [\n    {\n      \"field\": \"account_id\",\n      \"operator\": \"=\",\n      \"value\": 14\n    },\n    {\n      \"field\": \"type\",\n      \"operator\": \">\",\n      \"value\": 31\n    }\n  ]\n}\n```"
+    },
+    {
+      "instruction": "Show the  employees where designation equal to 93 and designation not equal to 49 and hire_date after 2025-02-05",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 93
+          },
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 49
+          },
+          {
+            "field": "hire_date",
+            "operator": ">",
+            "value": "2025-02-05"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 93
+          },
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 49
+          },
+          {
+            "field": "hire_date",
+            "operator": ">",
+            "value": "2025-02-05"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"designation\",\n      \"operator\": \"=\",\n      \"value\": 93\n    },\n    {\n      \"field\": \"designation\",\n      \"operator\": \"=\",\n      \"value\": 49\n    },\n    {\n      \"field\": \"hire_date\",\n      \"operator\": \">\",\n      \"value\": \"2025-02-05\"\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  accounts where balance greater than 14",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 14
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"balance\",\n      \"operator\": \">\",\n      \""
+    },
+    {
+      "instruction": "Show the minimum products where category is grocery and price equal to 49",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "grocery"
+          },
+          {
+            "field": "price",
+            "operator": "=",
+            "value": 49
+          }
+        ]
+      },
+      "generated": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "grocery"
+          },
+          {
+            "field": "price",
+            "operator": "=",
+            "value": 49
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"category\",\n      \"operator\": \"=\",\n      \"value\": \"grocery\"\n    },\n    {\n      \"field\": \"price\",\n      \"operator\": \"=\",\n      \"value\": 49\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  accounts where balance above 54",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 54
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "```\n{\n  \"entity\": \"accounts\","
+    },
+    {
+      "instruction": "Show the  customers where join_date between 2015-02-15 and 2015-09-28 and age not equal to 59 and city is Delhi",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "join_date",
+            "operator": "between",
+            "value": [
+              "2015-02-15",
+              "2015-09-28"
+            ]
+          },
+          {
+            "field": "age",
+            "operator": "=",
+            "value": 59
+          },
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Delhi"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \""
+    },
+    {
+      "instruction": "Show the  transactions where account_id equal to 20 and type above 54 and account_id not equal to 90",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 20
+          },
+          {
+            "field": "type",
+            "operator": ">",
+            "value": 54
+          },
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 90
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n    \"entity\": \"transactions\",\n    \"conditions\": ["
+    },
+    {
+      "instruction": "Show the count of accounts where open_date after 2024-05-25",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "open_date",
+            "operator": ">",
+            "value": "2024-05-25"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"open_date\",\n      \"operator\": \">\",\n      \"value\": \"2024-05-22\"\n    },\n    {"
+    },
+    {
+      "instruction": "Show the top 10 transactions where type below 80 and account_id not equal to 50",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "type",
+            "operator": "<",
+            "value": 80
+          },
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 50
+          }
+        ],
+        "limit": 10,
+        "order": "desc",
+        "order_by": "type"
+      },
+      "generated": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "type",
+            "operator": "<",
+            "value": 80
+          },
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 50
+          }
+        ],
+        "limit": 10,
+        "order": "desc",
+        "order_by": "type"
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"transactions\",\n  \"conditions\": [\n    {\n      \"field\": \"type\",\n      \"operator\": \"<\",\n      \"value\": 80\n    },\n    {\n      \"field\": \"account_id\",\n      \"operator\": \"=\",\n      \"value\": 50\n    }\n  ],\n  \"limit\": 10,\n  \"order\": \"desc\",\n  \"order_by\": \"type\"\n}"
+    },
+    {
+      "instruction": "Show the  transactions where account_id greater than 14",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": ">",
+            "value": 14
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "**\n```\n{\n  \"entity\":"
+    },
+    {
+      "instruction": "Show the  customers where age not equal to 75 and city is Delhi",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": "=",
+            "value": 75
+          },
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Delhi"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": "=",
+            "value": 75
+          },
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Delhi"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "[\n  {\n    \"entity\": \"customers\",\n    \"conditions\": [\n      {\n        \"field\": \"age\",\n        \"operator\": \"=\",\n        \"value\": 75\n      },\n      {\n        \"field\": \"city\",\n        \"operator\": \"=\",\n        \"value\": \"Delhi\"\n      }\n    ]\n  }\n]"
+    },
+    {
+      "instruction": "Show the  customers where membership_status is pending and total_spent less than 66 and membership_status is inactive",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "pending"
+          },
+          {
+            "field": "total_spent",
+            "operator": "<",
+            "value": 66
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "inactive"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"tags\",\n  \"conditions\": [\n    {\n      \"field\": \"customer\",\n      \"operator\": \"=\",\n      \""
+    },
+    {
+      "instruction": "Show the total customers where join_date between 2024-06-21 and 2025-02-09 and city is Chennai and total_spent not equal to 48",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "join_date",
+            "operator": "between",
+            "value": [
+              "2024-06-21",
+              "2025-02-09"
+            ]
+          },
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Chennai"
+          },
+          {
+            "field": "total_spent",
+            "operator": "=",
+            "value": 48
+          }
+        ]
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "join_date",
+            "operator": "between",
+            "value": [
+              "2024-06-21",
+              "2025-02-09"
+            ]
+          },
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Chennai"
+          },
+          {
+            "field": "total_spent",
+            "operator": "=",
+            "value": 48
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"join_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2024-06-21\",\n        \"2025-02-09\"\n      ]\n    },\n    {\n      \"field\": \"city\",\n      \"operator\": \"=\",\n      \"value\": \"Chennai\"\n    },\n    {\n      \"field\": \"total_spent\",\n      \"operator\": \"=\",\n      \"value\": 48\n    }\n  ]\n}\n\nExplanation:\nThe above request will show all customers where (join_date between 2024-06-21 and 2025-02-09) and city is Chennai and total_spent equal to 48."
+    },
+    {
+      "instruction": "Show the top 5 transactions where date after 2024-04-06",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "date",
+            "operator": ">",
+            "value": "2024-04-06"
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "date"
+      },
+      "generated": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "date",
+            "operator": ">",
+            "value": "2024-04-06"
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "date"
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"transactions\",\n  \"conditions\": [\n    {\n      \"field\": \"date\",\n      \"operator\": \">\",\n      \"value\": \"2024-04-06\"\n    }\n  ],\n  \"limit\": 5,\n  \"order\": \"desc\",\n  \"order_by\": \"date\"\n}"
+    },
+    {
+      "instruction": "Show the count of orders where customer_id below 17",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "customer_id",
+            "operator": "<",
+            "value": 17
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"customer_id\",\n      \"operator\": \"=\",\n      \"value\": 38\n    },\n    {\n      \"field"
+    },
+    {
+      "instruction": "Show the  orders where order_date after 2024-01-22",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "order_date",
+            "operator": ">",
+            "value": "2024-01-22"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"order_date\",\n      \"operator\": \">\",\n      \"value\": \"2025-04-04\"\n    },\n    {\n      \"field\": \"order_date\",\n      \"operator\": \">\",\n      \"value\": \"2025-08-20\"\n    },\n    {\n      \"field\": \"order_date\",\n      \"operator\": \">\",\n      \"value\": \"2025-04-11"
+    },
+    {
+      "instruction": "Show the  accounts where balance less than 62 and branch greater than 46 and branch less than 49",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "balance",
+            "operator": "<",
+            "value": 62
+          },
+          {
+            "field": "branch",
+            "operator": ">",
+            "value": 46
+          },
+          {
+            "field": "branch",
+            "operator": "<",
+            "value": 49
+          }
+        ]
+      },
+      "generated": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 13
+          },
+          {
+            "field": "branch",
+            "operator": "=",
+            "value": 49
+          }
+        ]
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"account_id\",\n      \"operator\": \"=\",\n      \"value\": 13\n    },\n    {\n      \"field\": \"branch\",\n      \"operator\": \"=\",\n      \"value\": 49\n    }\n  ]\n}\n```\n\n5. Delete account where account_id equal to 53 and branch equal to 71 \n\n```\nResponse"
+    },
+    {
+      "instruction": "Show the  products where category is toys and launch_date after 2016-12-22 and price greater than 86",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "toys"
+          },
+          {
+            "field": "launch_date",
+            "operator": ">",
+            "value": "2016-12-22"
+          },
+          {
+            "field": "price",
+            "operator": ">",
+            "value": 86
+          }
+        ]
+      },
+      "generated": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "toys"
+          },
+          {
+            "field": "launch_date",
+            "operator": ">",
+            "value": "2016-12-22"
+          },
+          {
+            "field": "price",
+            "operator": ">",
+            "value": 86
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"category\",\n      \"operator\": \"=\",\n      \"value\": \"toys\"\n    },\n    {\n      \"field\": \"launch_date\",\n      \"operator\": \">\",\n      \"value\": \"2016-12-22\"\n    },\n    {\n      \"field\": \"price\",\n      \"operator\": \">\",\n      \"value\": 86\n    }\n  ]\n}\n```\n\n4. Query with multiple conditions:\n```\nhttps://jsonapi.herokuapp.com/v1/entities?include=products&conditions=\n  (\n    (\n      (\n        (\n          (\n            (\n              (\n                (\n                  (\n                    (\n                      (\n                        (\n                          (\n                            (\n                              (\n                                (\n                                  (\n                                    (\n                                      (\n                                        (\n                                          (\n                                            (\n                                              (\n                                                ("
+    },
+    {
+      "instruction": "Show the  orders where customer_id above 18 and status is completed",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "customer_id",
+            "operator": ">",
+            "value": 18
+          },
+          {
+            "field": "status",
+            "operator": "=",
+            "value": "completed"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "customer_id",
+            "operator": ">",
+            "value": 18
+          },
+          {
+            "field": "status",
+            "operator": "=",
+            "value": "completed"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"customer_id\",\n      \"operator\": \">\",\n      \"value\": 18\n    },\n    {\n      \"field\": \"status\",\n      \"operator\": \"=\",\n      \"value\": \"completed\"\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  orders where region is Hyderabad",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "region",
+            "operator": "=",
+            "value": "Hyderabad"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"region\",\n      \"operator\": \"=\","
+    },
+    {
+      "instruction": "Show the top 5 customers where membership_status is completed and membership_status is completed and membership_status is cancelled",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "completed"
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "completed"
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "cancelled"
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "membership_status"
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "completed"
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "cancelled"
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "membership_status"
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"completed\"\n    },\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"cancelled\"\n    }\n  ],\n  \"limit\": 5,\n  \"order\": \"desc\",\n  \"order_by\": \"membership_status\"\n}"
+    },
+    {
+      "instruction": "Show the  employees where designation above 70",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "designation",
+            "operator": ">",
+            "value": 70
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"age\",\n      \"operator\": \">\",\n      \"value\": 68\n    },\n    {\n      \"field\": \"designation\","
+    },
+    {
+      "instruction": "Show the count of customers where join_date after 2016-12-08 and membership_status is active and total_spent equal to 13",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "join_date",
+            "operator": ">",
+            "value": "2016-12-08"
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "active"
+          },
+          {
+            "field": "total_spent",
+            "operator": "=",
+            "value": 13
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"join_date\",\n      \"operator\": \">\",\n      \"value\": \"2016-12-08\"\n    },\n    {\n      \"field\": \""
+    },
+    {
+      "instruction": "Show the  customers where membership_status is inactive and membership_status is completed and total_spent equal to 37",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "inactive"
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "completed"
+          },
+          {
+            "field": "total_spent",
+            "operator": "=",
+            "value": 37
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"inactive\"\n    },\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"completed\"\n    },\n    {\n      \"field\": \"total_spent\",\n      \"operator\": \"=\",\n      \"value\": 37\n    }\n  ]\n}\n```\n\n4. Query with multiple conditions:\n```\n$graphql = \"\n  {\n    customers {\n      id\n      name\n      membership_status\n      membership_status\n      total_spent\n    }\n  }\n  \";\n\n  $results = $client->query($graphql);\n\n  var_dump($results);\n```\n\nOutput:\n```\narray(2) {\n  [0]=>\n  array(2) {\n    [0]=>\n    array(2) {\n      [0]=>\n      array(2"
+    },
+    {
+      "instruction": "Show the total transactions where amount equal to 83 and account_id above 87 and account_id below 48",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "amount",
+            "operator": "=",
+            "value": 83
+          },
+          {
+            "field": "account_id",
+            "operator": ">",
+            "value": 87
+          },
+          {
+            "field": "account_id",
+            "operator": "<",
+            "value": 48
+          }
+        ]
+      },
+      "generated": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "amount",
+            "operator": "=",
+            "value": 29
+          },
+          {
+            "field": "account_id",
+            "operator": ">",
+            "value": 59
+          }
+        ]
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"transactions\",\n  \"conditions\": [\n    {\n      \"field\": \"amount\",\n      \"operator\": \"=\",\n      \"value\": 29\n    },\n    {\n      \"field\": \"account_id\",\n      \"operator\": \">\",\n      \"value\": 59\n    }\n  ]\n}\n```\n\n5. Get total transactions where account_id above 90 and account_id below 32 and account_id"
+    },
+    {
+      "instruction": "Show the  employees where designation not equal to 26 and salary above 86",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 26
+          },
+          {
+            "field": "salary",
+            "operator": ">",
+            "value": 86
+          }
+        ]
+      },
+      "generated": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 26
+          },
+          {
+            "field": "salary",
+            "operator": ">",
+            "value": 86
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"designation\",\n      \"operator\": \"=\",\n      \"value\": 26\n    },\n    {\n      \"field\": \"salary\",\n      \"operator\": \">\",\n      \"value\": 86\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  customers where membership_status is cancelled and membership_status is inactive",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "cancelled"
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "inactive"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "cancelled"
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "inactive"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"cancelled\"\n    },\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"inactive\"\n    }\n  ]\n}\n```\n\n4. Query with multiple conditions:\n\n```\nhttps://api.datadoghq.com/dd/query?from=2021-04-01&to=2021-04-03&tags%5B%5D=customer&tags%5B%5D=employee&tags%5B%5D=manager&tags%5B%5D=employee&tags%5B%5D=customer&tags%5B%5D=employee&tags%5B%5D=customer&tags%5B%5D=employee&tags%5B%5D=customer&tags%5B%5D=employee&tags%5B%5D"
+    },
+    {
+      "instruction": "Show the maximum accounts where open_date after 2017-05-28 and branch greater than 34 and balance greater than 92",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "open_date",
+            "operator": ">",
+            "value": "2017-05-28"
+          },
+          {
+            "field": "branch",
+            "operator": ">",
+            "value": 34
+          },
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 92
+          }
+        ]
+      },
+      "generated": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 10
+          },
+          {
+            "field": "branch",
+            "operator": "=",
+            "value": 45
+          }
+        ]
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"account_id\",\n      \"operator\": \"=\",\n      \"value\": 10\n    },\n    {\n      \"field\": \"branch\",\n      \"operator\": \"=\",\n      \"value\": 45\n    }\n  ]\n}\n```\n\n5. Get all accounts where branch is 47 and open_date after"
+    },
+    {
+      "instruction": "Show the  accounts where open_date after 2015-07-30 and account_type not equal to 85 and balance greater than 96",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "open_date",
+            "operator": ">",
+            "value": "2015-07-30"
+          },
+          {
+            "field": "account_type",
+            "operator": "=",
+            "value": 85
+          },
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 96
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"account_type\",\n      \"operator\": \"=\",\n      \"value\": 87\n    },\n    {\n      \"field\": \"open_date\",\n      \"operator\": \">\",\n      \"value\": \"2019-09-28\"\n    }\n  ]"
+    },
+    {
+      "instruction": "Show the  transactions where account_id not equal to 79 and type below 33 and date between 2017-12-16 and 2018-06-09",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 79
+          },
+          {
+            "field": "type",
+            "operator": "<",
+            "value": 33
+          },
+          {
+            "field": "date",
+            "operator": "between",
+            "value": [
+              "2017-12-16",
+              "2018-06-09"
+            ]
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"transactions\",\n  \"conditions\": [\n    {\n      \"field\": \"account_id\",\n      \"operator\": \"=\",\n      \"value\": 79\n    },\n    {\n      \"field\": \"type\",\n      \"operator\": \"<\",\n      \"value\": 33\n    },\n    {\n      \"field\": \"date\",\n      \"operator\": \"between\",\n      \"value\": ["
+    },
+    {
+      "instruction": "Show the maximum employees where designation equal to 79 and hire_date between 2016-03-04 and 2016-05-20 and hire_date between 2018-09-27 and 2018-10-27",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 79
+          },
+          {
+            "field": "hire_date",
+            "operator": "between",
+            "value": [
+              "2016-03-04",
+              "2016-05-20"
+            ]
+          },
+          {
+            "field": "hire_date",
+            "operator": "between",
+            "value": [
+              "2018-09-27",
+              "2018-10-27"
+            ]
+          }
+        ]
+      },
+      "generated": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 79
+          },
+          {
+            "field": "hire_date",
+            "operator": "between",
+            "value": [
+              "2016-03-04",
+              "2016-05-20"
+            ]
+          },
+          {
+            "field": "hire_date",
+            "operator": "between",
+            "value": [
+              "2018-09-27",
+              "2018-10-27"
+            ]
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"designation\",\n      \"operator\": \"=\",\n      \"value\": 79\n    },\n    {\n      \"field\": \"hire_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2016-03-04\",\n        \"2016-05-20\"\n      ]\n    },\n    {\n      \"field\": \"hire_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2018-09-27\",\n        \"2018-10-27\"\n      ]\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  customers where age less than 37 and age above 38",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 37
+          },
+          {
+            "field": "age",
+            "operator": ">",
+            "value": 38
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "```\n   {\n     \"entity\": \"orders\",\n     \"conditions\": [\n       {\n         \"field\": \"customer_id\",\n         \"operator\": \"=\",\n         \"value\": 1\n       },"
+    },
+    {
+      "instruction": "Show the minimum products where launch_date after 2024-04-26 and stock less than 31",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "launch_date",
+            "operator": ">",
+            "value": "2024-04-26"
+          },
+          {
+            "field": "stock",
+            "operator": "<",
+            "value": 31
+          }
+        ]
+      },
+      "generated": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "launch_date",
+            "operator": ">",
+            "value": "2024-04-26"
+          },
+          {
+            "field": "stock",
+            "operator": "<",
+            "value": 31
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"launch_date\",\n      \"operator\": \">\",\n      \"value\": \"2024-04-26\"\n    },\n    {\n      \"field\": \"stock\",\n      \"operator\": \"<\",\n      \"value\": 31\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  orders where amount less than 99 and customer_id equal to 80 and order_date between 2018-10-14 and 2019-07-24",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "amount",
+            "operator": "<",
+            "value": 99
+          },
+          {
+            "field": "customer_id",
+            "operator": "=",
+            "value": 80
+          },
+          {
+            "field": "order_date",
+            "operator": "between",
+            "value": [
+              "2018-10-14",
+              "2019-07-24"
+            ]
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"customer_id\",\n      \"operator\": \"=\",\n      \"value\": 50\n    },\n    {\n      \"field\": \"order_date\","
+    },
+    {
+      "instruction": "Show the  accounts where balance above 47 and open_date after 2024-05-15",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 47
+          },
+          {
+            "field": "open_date",
+            "operator": ">",
+            "value": "2024-05-15"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 47
+          },
+          {
+            "field": "open_date",
+            "operator": ">",
+            "value": "2024-05-15"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"balance\",\n      \"operator\": \">\",\n      \"value\": 47\n    },\n    {\n      \"field\": \"open_date\",\n      \"operator\": \">\",\n      \"value\": \"2024-05-15\"\n    }\n  ]\n}\n```"
+    },
+    {
+      "instruction": "Show the  transactions where type not equal to 86",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "type",
+            "operator": "=",
+            "value": 86
+          }
+        ]
+      },
+      "generated": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "type",
+            "operator": "=",
+            "value": 86
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"transactions\",\n  \"conditions\": [\n    {\n      \"field\": \"type\",\n      \"operator\": \"=\",\n      \"value\": 86\n    }\n  ]\n}\n```\n\n### 58. Show all transactions where type greater than 12 and type less than 29 and date after 2023-02-24 \n\n**Request**:\n```\n$ curl -X GET http://localhost:8080/v1/transactions \\\n  -H 'Authorization: JWT eyJhbGdlYXNlV2FtZiI6IjIwMzI0NDE5NzI2NjEzNjM5NjI0NjUiLCJmaWxlRmFudFJ"
+    },
+    {
+      "instruction": "Show the  customers where total_spent not equal to 71",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "total_spent",
+            "operator": "=",
+            "value": 71
+          }
+        ]
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "total_spent",
+            "operator": "=",
+            "value": 96
+          },
+          {
+            "field": "total_spent",
+            "operator": "=",
+            "value": 33
+          }
+        ]
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"total_spent\",\n      \"operator\": \"=\",\n      \"value\": 96\n    },\n    {\n      \"field\": \"total_spent\",\n      \"operator\": \"=\",\n      \"value\": 33\n    }\n  ]\n}\n```"
+    },
+    {
+      "instruction": "Show the total products where category is toys",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "toys"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"category\",\n      \"operator\": \"=\",\n      \"value\": \"toys\"\n    }\n  ]\n}\n```\n\n4. With limit and offset:\n```\nHTTP/1.1 200 OK\nContent-Type: application/json\n\n{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"price\",\n      \"operator\": \"=\",\n      \"value\": 10\n    }\n  ],\n  \"limit\": 5,\n  \"offset\": 10\n}\n```\n\n5. With limit and offset:\n```\nHTTP/1.1 200 OK\nContent-Type: application/json\n\n{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"price\",\n      \"operator\": \"=\",\n      \"value\": 10\n    }\n  ],\n  \"limit\": 5,\n  \"offset\": 10\n}\n```"
+    },
+    {
+      "instruction": "Show the  employees where department is Sales and salary not equal to 21 and department is Sales",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "department",
+            "operator": "=",
+            "value": "Sales"
+          },
+          {
+            "field": "salary",
+            "operator": "=",
+            "value": 21
+          },
+          {
+            "field": "department",
+            "operator": "=",
+            "value": "Sales"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "```\n{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"department\",\n      \"operator\": \"=\",\n      \"value\":"
+    },
+    {
+      "instruction": "Show the top 10 orders where status is active and region is Hyderabad",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "status",
+            "operator": "=",
+            "value": "active"
+          },
+          {
+            "field": "region",
+            "operator": "=",
+            "value": "Hyderabad"
+          }
+        ],
+        "limit": 10,
+        "order": "desc",
+        "order_by": "status"
+      },
+      "generated": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "status",
+            "operator": "=",
+            "value": "active"
+          },
+          {
+            "field": "region",
+            "operator": "=",
+            "value": "Hyderabad"
+          }
+        ],
+        "limit": 10,
+        "order": "desc",
+        "order_by": "status"
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"status\",\n      \"operator\": \"=\",\n      \"value\": \"active\"\n    },\n    {\n      \"field\": \"region\",\n      \"operator\": \"=\",\n      \"value\": \"Hyderabad\"\n    }\n  ],\n  \"limit\": 10,\n  \"order\": \"desc\",\n  \"order_by\": \"status\"\n}\n```\n\n3. Show all orders where status is cancelled and region is Delhi and status is active \n\n```\nResponse"
+    },
+    {
+      "instruction": "Show the  products where category is fashion and price less than 97",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "category",
+            "operator": "=",
+            "value": "fashion"
+          },
+          {
+            "field": "price",
+            "operator": "<",
+            "value": 97
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\": [\n    {\n      \"field\": \"category\",\n      \"operator\": \""
+    },
+    {
+      "instruction": "Show the  accounts where open_date between 2016-05-08 and 2017-01-28 and balance below 83 and branch equal to 64",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "open_date",
+            "operator": "between",
+            "value": [
+              "2016-05-08",
+              "2017-01-28"
+            ]
+          },
+          {
+            "field": "balance",
+            "operator": "<",
+            "value": 83
+          },
+          {
+            "field": "branch",
+            "operator": "=",
+            "value": 64
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"open_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2016-0"
+    },
+    {
+      "instruction": "Show the average products where launch_date after 2024-12-20",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "launch_date",
+            "operator": ">",
+            "value": "2024-12-20"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "order_date",
+            "operator": ">",
+            "value": "2023-10-15"
+          },
+          {
+            "field": "order_date",
+            "operator": ">",
+            "value": "2024-08-26"
+          }
+        ]
+      },
+      "exact_match": false,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"order_date\",\n      \"operator\": \">\",\n      \"value\": \"2023-10-15\"\n    },\n    {\n      \"field\": \"order_date\",\n      \"operator\": \">\",\n      \"value\": \"2024-08-26\"\n    }\n  ]\n}\n```\n\n5. Show total orders where order_date after 2023-07-15 and order_date after"
+    },
+    {
+      "instruction": "Show the minimum accounts where branch equal to 63 and account_type equal to 43 and balance equal to 36",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "branch",
+            "operator": "=",
+            "value": 63
+          },
+          {
+            "field": "account_type",
+            "operator": "=",
+            "value": 43
+          },
+          {
+            "field": "balance",
+            "operator": "=",
+            "value": 36
+          }
+        ]
+      },
+      "generated": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "branch",
+            "operator": "=",
+            "value": 63
+          },
+          {
+            "field": "account_type",
+            "operator": "=",
+            "value": 43
+          },
+          {
+            "field": "balance",
+            "operator": "=",
+            "value": 36
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"branch\",\n      \"operator\": \"=\",\n      \"value\": 63\n    },\n    {\n      \"field\": \"account_type\",\n      \"operator\": \"=\",\n      \"value\": 43\n    },\n    {\n      \"field\": \"balance\",\n      \"operator\": \"=\",\n      \"value\": 36\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the top 5 employees where age above 97",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": ">",
+            "value": 97
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "age"
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"age\",\n      \"operator\": \"<\",\n      \"value\": 75\n    },\n    {\n      \"field\": \"age\",\n      \"operator\": \"=\""
+    },
+    {
+      "instruction": "Show the top 5 accounts where account_type below 69 and branch above 84 and branch below 28",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "account_type",
+            "operator": "<",
+            "value": 69
+          },
+          {
+            "field": "branch",
+            "operator": ">",
+            "value": 84
+          },
+          {
+            "field": "branch",
+            "operator": "<",
+            "value": 28
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "account_type"
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"account_type\",\n      \"operator\": \"<\",\n      \"value\": 69\n    },\n    {\n      \"field\": \"branch\",\n      \"operator\": \">\",\n      \"value\": 84\n    },\n    {\n      \"field\": \"branch\",\n      \"operator\": \"<\",\n      \"value\": 28\n    }\n  ],"
+    },
+    {
+      "instruction": "Show the bottom 5 customers where total_spent above 91 and join_date after 2022-05-01",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "total_spent",
+            "operator": ">",
+            "value": 91
+          },
+          {
+            "field": "join_date",
+            "operator": ">",
+            "value": "2022-05-01"
+          }
+        ],
+        "limit": 5,
+        "order": "asc",
+        "order_by": "total_spent"
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "total_spent",
+            "operator": ">",
+            "value": 91
+          },
+          {
+            "field": "join_date",
+            "operator": ">",
+            "value": "2022-05-01"
+          }
+        ],
+        "limit": 5,
+        "order": "asc",
+        "order_by": "total_spent"
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"total_spent\",\n      \"operator\": \">\",\n      \"value\": 91\n    },\n    {\n      \"field\": \"join_date\",\n      \"operator\": \">\",\n      \"value\": \"2022-05-01\"\n    }\n  ],\n  \"limit\": 5,\n  \"order\": \"asc\",\n  \"order_by\": \"total_spent\"\n}"
+    },
+    {
+      "instruction": "Show the  employees where age not equal to 45",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": "=",
+            "value": 45
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"age\","
+    },
+    {
+      "instruction": "Show the top 5 employees where age above 40 and hire_date between 2025-11-09 and 2026-07-15",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": ">",
+            "value": 40
+          },
+          {
+            "field": "hire_date",
+            "operator": "between",
+            "value": [
+              "2025-11-09",
+              "2026-07-15"
+            ]
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "age"
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"age\",\n      \"operator\": \">\",\n      \"value\": 40\n    },\n    {\n      \"field\": \"hire_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2025-11-09\",\n        \"2026-07-15\"\n      ]\n    }"
+    },
+    {
+      "instruction": "Show the  customers where city is Hyderabad",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Hyderabad"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"age"
+    },
+    {
+      "instruction": "Show the sum of accounts where branch equal to 72 and balance greater than 12",
+      "expected": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "branch",
+            "operator": "=",
+            "value": 72
+          },
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 12
+          }
+        ]
+      },
+      "generated": {
+        "entity": "accounts",
+        "conditions": [
+          {
+            "field": "branch",
+            "operator": "=",
+            "value": 72
+          },
+          {
+            "field": "balance",
+            "operator": ">",
+            "value": 12
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"accounts\",\n  \"conditions\": [\n    {\n      \"field\": \"branch\",\n      \"operator\": \"=\",\n      \"value\": 72\n    },\n    {\n      \"field\": \"balance\",\n      \"operator\": \">\",\n      \"value\": 12\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  employees where salary less than 39 and hire_date between 2019-12-11 and 2020-04-20 and designation not equal to 86",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "salary",
+            "operator": "<",
+            "value": 39
+          },
+          {
+            "field": "hire_date",
+            "operator": "between",
+            "value": [
+              "2019-12-11",
+              "2020-04-20"
+            ]
+          },
+          {
+            "field": "designation",
+            "operator": "=",
+            "value": 86
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"salary\",\n      \"operator\": \"<\",\n      \"value\": 39\n    },\n    {\n      \"field\": \"hire_date\",\n      \"operator\": \"between\",\n      \"value\": [\n        \"2019-12-11\",\n        \"2020-04-20\"\n      ]"
+    },
+    {
+      "instruction": "Show the  customers where age equal to 40 and membership_status is cancelled",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": "=",
+            "value": 40
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "cancelled"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": "=",
+            "value": 40
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "cancelled"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"age\",\n      \"operator\": \"=\",\n      \"value\": 40\n    },\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"cancelled\"\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the  orders where customer_id equal to 21",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "customer_id",
+            "operator": "=",
+            "value": 21
+          }
+        ]
+      },
+      "generated": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "customer_id",
+            "operator": "=",
+            "value": 21
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"customer_id\",\n      \"operator\": \"=\",\n      \"value\": 21\n    }\n  ]\n}\n```\n\n4. Multiple conditions:\n```\n$node = $cassandra->prepare(\"SELECT * FROM orders WHERE customer_id = 10 AND customer_id = 21 AND customer_id = 22 \");\n$results = $node->execute();\nvar_dump($results);\n```\n\nOutput:\n```\narray (\n  'entity' => 'orders',\n  'conditions' => array (\n    array (\n      'field' => 'customer_id',\n      'operator' => '=',\n      'value' => 10,\n    ),\n    array (\n      'field' => 'customer_id',\n      'operator' => '=',\n      'value' => 21,\n    ),\n    array (\n      'field' => 'customer_id',\n      'operator' => '=',\n      'value' => 22"
+    },
+    {
+      "instruction": "Show the  orders where status is pending and customer_id below 85 and amount not equal to 85",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "status",
+            "operator": "=",
+            "value": "pending"
+          },
+          {
+            "field": "customer_id",
+            "operator": "<",
+            "value": 85
+          },
+          {
+            "field": "amount",
+            "operator": "=",
+            "value": 85
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \""
+    },
+    {
+      "instruction": "Show the  transactions where type above 53 and date after 2025-06-10",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "type",
+            "operator": ">",
+            "value": 53
+          },
+          {
+            "field": "date",
+            "operator": ">",
+            "value": "2025-06-10"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "type",
+            "operator": ">",
+            "value": 53
+          },
+          {
+            "field": "date",
+            "operator": ">",
+            "value": "2025-06-10"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"transactions\",\n  \"conditions\": [\n    {\n      \"field\": \"type\",\n      \"operator\": \">\",\n      \"value\": 53\n    },\n    {\n      \"field\": \"date\",\n      \"operator\": \">\",\n      \"value\": \"2025-06-10\"\n    }\n  ]\n}\n\nExplanation:\nThe above request is to show all transactions where type above 53 and date after 2025-06-10."
+    },
+    {
+      "instruction": "Show the bottom 5 employees where salary not equal to 92 and department is Marketing and hire_date between 2023-01-04 and 2023-07-23",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "salary",
+            "operator": "=",
+            "value": 92
+          },
+          {
+            "field": "department",
+            "operator": "=",
+            "value": "Marketing"
+          },
+          {
+            "field": "hire_date",
+            "operator": "between",
+            "value": [
+              "2023-01-04",
+              "2023-07-23"
+            ]
+          }
+        ],
+        "limit": 5,
+        "order": "asc",
+        "order_by": "salary"
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"salary\",\n      \"operator\": \"=\",\n      \"value\": 92\n    },\n    {\n      \"field\": \"department\",\n      \"operator\": \"=\",\n      \"value\": \""
+    },
+    {
+      "instruction": "Show the  orders where status is pending and customer_id below 76 and region is Bangalore",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "status",
+            "operator": "=",
+            "value": "pending"
+          },
+          {
+            "field": "customer_id",
+            "operator": "<",
+            "value": 76
+          },
+          {
+            "field": "region",
+            "operator": "=",
+            "value": "Bangalore"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"status\",\n      \"operator\": \"=\",\n      \"value\": \"cancelled\"\n    },\n    {\n      \"field\": \"customer_id\",\n      \"operator\": \"=\",\n      \"value\": 95\n    },\n    {\n      \"field\": \"region\",\n      \"operator\": \"=\",\n      \"value"
+    },
+    {
+      "instruction": "Show the count of products where price not equal to 87",
+      "expected": {
+        "entity": "products",
+        "conditions": [
+          {
+            "field": "price",
+            "operator": "=",
+            "value": 87
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"products\",\n  \"conditions\":"
+    },
+    {
+      "instruction": "Show the maximum orders where customer_id greater than 78",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "customer_id",
+            "operator": ">",
+            "value": 78
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"customer_id\",\n      \"operator\": \""
+    },
+    {
+      "instruction": "Show the sum of customers where total_spent equal to 43 and membership_status is pending and age less than 82",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "total_spent",
+            "operator": "=",
+            "value": 43
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "pending"
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 82
+          }
+        ]
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "total_spent",
+            "operator": "=",
+            "value": 43
+          },
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "pending"
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 82
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"total_spent\",\n      \"operator\": \"=\",\n      \"value\": 43\n    },\n    {\n      \"field\": \"membership_status\",\n      \"operator\": \"=\",\n      \"value\": \"pending\"\n    },\n    {\n      \"field\": \"age\",\n      \"operator\": \"<\",\n      \"value\": 82\n    }\n  ]\n}\n```"
+    },
+    {
+      "instruction": "Show the top 5 orders where amount above 40",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "amount",
+            "operator": ">",
+            "value": 40
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "amount"
+      },
+      "generated": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "amount",
+            "operator": ">",
+            "value": 40
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "amount"
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"amount\",\n      \"operator\": \">\",\n      \"value\": 40\n    }\n  ],\n  \"limit\": 5,\n  \"order\": \"desc\",\n  \"order_by\": \"amount\"\n}\n```"
+    },
+    {
+      "instruction": "Show the minimum transactions where account_id equal to 95 and amount greater than 65",
+      "expected": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 95
+          },
+          {
+            "field": "amount",
+            "operator": ">",
+            "value": 65
+          }
+        ]
+      },
+      "generated": {
+        "entity": "transactions",
+        "conditions": [
+          {
+            "field": "account_id",
+            "operator": "=",
+            "value": 95
+          },
+          {
+            "field": "amount",
+            "operator": ">",
+            "value": 65
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "{\n  \"entity\": \"transactions\",\n  \"conditions\": [\n    {\n      \"field\": \"account_id\",\n      \"operator\": \"=\",\n      \"value\": 95\n    },\n    {\n      \"field\": \"amount\",\n      \"operator\": \">\",\n      \"value\": 65\n    }\n  ]\n}"
+    },
+    {
+      "instruction": "Show the top 10 customers where membership_status is cancelled",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "membership_status",
+            "operator": "=",
+            "value": "cancelled"
+          }
+        ],
+        "limit": 10,
+        "order": "desc",
+        "order_by": "membership_status"
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"customers"
+    },
+    {
+      "instruction": "Show the  employees where age below 46 and department is HR and age less than 89",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 46
+          },
+          {
+            "field": "department",
+            "operator": "=",
+            "value": "HR"
+          },
+          {
+            "field": "age",
+            "operator": "<",
+            "value": 89
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {\n      \"field\": \"age\",\n      \"operator\": \"<\",\n      \"value\": 46\n    },\n    {\n      \"field\": \"department\",\n      \"operator\": \"=\",\n      \"value\": \"HR\"\n    },\n    {\n      \"field\": \"age\",\n      \"operator\": \"<\",\n      \"value\": 89\n    }"
+    },
+    {
+      "instruction": "Show the  employees where age greater than 26 and designation above 65",
+      "expected": {
+        "entity": "employees",
+        "conditions": [
+          {
+            "field": "age",
+            "operator": ">",
+            "value": 26
+          },
+          {
+            "field": "designation",
+            "operator": ">",
+            "value": 65
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"employees\",\n  \"conditions\": [\n    {"
+    },
+    {
+      "instruction": "Show the top 5 orders where status is cancelled and region is Mumbai and region is Bangalore",
+      "expected": {
+        "entity": "orders",
+        "conditions": [
+          {
+            "field": "status",
+            "operator": "=",
+            "value": "cancelled"
+          },
+          {
+            "field": "region",
+            "operator": "=",
+            "value": "Mumbai"
+          },
+          {
+            "field": "region",
+            "operator": "=",
+            "value": "Bangalore"
+          }
+        ],
+        "limit": 5,
+        "order": "desc",
+        "order_by": "status"
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"orders\",\n  \"conditions\": [\n    {\n      \"field\": \"status\",\n      \"operator\": \"=\",\n      \"value\": \"cancelled\"\n    },\n    {\n      \"field\": \"region\",\n      \"operator\": \"=\","
+    },
+    {
+      "instruction": "Show the total customers where join_date between 2025-05-23 and 2025-06-25 and city is Chennai",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "join_date",
+            "operator": "between",
+            "value": [
+              "2025-05-23",
+              "2025-06-25"
+            ]
+          },
+          {
+            "field": "city",
+            "operator": "=",
+            "value": "Chennai"
+          }
+        ]
+      },
+      "generated": {},
+      "exact_match": false,
+      "structure_match": false,
+      "key_overlap": 0.0,
+      "raw_generated": "{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"join_date\",\n      \"operator\": \">\",\n      \"value\": \"202"
+    },
+    {
+      "instruction": "Show the  customers where total_spent less than 87 and join_date after 2018-04-03",
+      "expected": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "total_spent",
+            "operator": "<",
+            "value": 87
+          },
+          {
+            "field": "join_date",
+            "operator": ">",
+            "value": "2018-04-03"
+          }
+        ]
+      },
+      "generated": {
+        "entity": "customers",
+        "conditions": [
+          {
+            "field": "total_spent",
+            "operator": "<",
+            "value": 87
+          },
+          {
+            "field": "join_date",
+            "operator": ">",
+            "value": "2018-04-03"
+          }
+        ]
+      },
+      "exact_match": true,
+      "structure_match": true,
+      "key_overlap": 1.0,
+      "raw_generated": "**\n```\n{\n  \"entity\": \"customers\",\n  \"conditions\": [\n    {\n      \"field\": \"total_spent\",\n      \"operator\": \"<\",\n      \"value\": 87\n    },\n    {\n      \"field\": \"join_date\",\n      \"operator\": \">\",\n      \"value\": \"2018-04-03\"\n    }\n  ]\n}\n```"
+    }
+  ]
+}

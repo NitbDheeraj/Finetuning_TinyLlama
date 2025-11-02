@@ -1,0 +1,4563 @@
+[
+  {
+    "instruction": "Show the top 5 employees where salary greater than 37",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "salary",
+          "operator": ">",
+          "value": 37
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "salary"
+    }
+  },
+  {
+    "instruction": "Show the  customers where city is Mumbai and total_spent greater than 19 and age below 54",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Mumbai"
+        },
+        {
+          "field": "total_spent",
+          "operator": ">",
+          "value": 19
+        },
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 54
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum products where price greater than 47 and category is electronics",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": ">",
+          "value": 47
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "electronics"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where membership_status is active and membership_status is completed and total_spent less than 50",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "active"
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "completed"
+        },
+        {
+          "field": "total_spent",
+          "operator": "<",
+          "value": 50
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where amount below 96",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 96
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where department is HR",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "HR"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where balance less than 62",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "balance",
+          "operator": "<",
+          "value": 62
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where join_date after 2022-09-15",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": ">",
+          "value": "2022-09-15"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where launch_date between 2020-03-02 and 2020-12-15 and price equal to 48 and launch_date between 2021-08-25 and 2021-09-24",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2020-03-02",
+            "2020-12-15"
+          ]
+        },
+        {
+          "field": "price",
+          "operator": "=",
+          "value": 48
+        },
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2021-08-25",
+            "2021-09-24"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where department is Sales",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Sales"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where age above 74 and salary equal to 26 and designation less than 43",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 74
+        },
+        {
+          "field": "salary",
+          "operator": "=",
+          "value": 26
+        },
+        {
+          "field": "designation",
+          "operator": "<",
+          "value": 43
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where balance greater than 91 and account_type less than 94",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 91
+        },
+        {
+          "field": "account_type",
+          "operator": "<",
+          "value": 94
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where status is inactive",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "inactive"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where account_id not equal to 55 and type greater than 84",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 55
+        },
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 84
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where city is Delhi and age less than 76",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Delhi"
+        },
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 76
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where price not equal to 89 and price equal to 85",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": "=",
+          "value": 89
+        },
+        {
+          "field": "price",
+          "operator": "=",
+          "value": 85
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where branch above 12",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "branch",
+          "operator": ">",
+          "value": 12
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where open_date between 2025-01-13 and 2025-03-31",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": "between",
+          "value": [
+            "2025-01-13",
+            "2025-03-31"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where customer_id less than 65",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": "<",
+          "value": 65
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where stock equal to 81 and launch_date between 2018-08-17 and 2019-02-27",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "stock",
+          "operator": "=",
+          "value": 81
+        },
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2018-08-17",
+            "2019-02-27"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where membership_status is active and age greater than 16",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "active"
+        },
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 16
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where price greater than 87 and launch_date between 2015-04-04 and 2015-05-12 and category is toys",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": ">",
+          "value": 87
+        },
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2015-04-04",
+            "2015-05-12"
+          ]
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "toys"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where hire_date between 2015-04-13 and 2015-11-12 and salary greater than 19 and age less than 11",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2015-04-13",
+            "2015-11-12"
+          ]
+        },
+        {
+          "field": "salary",
+          "operator": ">",
+          "value": 19
+        },
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 11
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where city is Chennai",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Chennai"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum products where stock less than 83 and launch_date between 2023-12-04 and 2024-08-10 and price greater than 32",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "stock",
+          "operator": "<",
+          "value": 83
+        },
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2023-12-04",
+            "2024-08-10"
+          ]
+        },
+        {
+          "field": "price",
+          "operator": ">",
+          "value": 32
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum accounts where account_type less than 51",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "account_type",
+          "operator": "<",
+          "value": 51
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where age equal to 65 and age less than 85 and designation equal to 41",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 65
+        },
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 85
+        },
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 41
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where open_date after 2017-07-28 and open_date after 2023-09-19 and account_type greater than 71",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2017-07-28"
+        },
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2023-09-19"
+        },
+        {
+          "field": "account_type",
+          "operator": ">",
+          "value": 71
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where designation not equal to 77",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 77
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the bottom 5 products where stock above 48 and launch_date between 2024-06-14 and 2025-03-13 and price below 45",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "stock",
+          "operator": ">",
+          "value": 48
+        },
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2024-06-14",
+            "2025-03-13"
+          ]
+        },
+        {
+          "field": "price",
+          "operator": "<",
+          "value": 45
+        }
+      ],
+      "limit": 5,
+      "order": "asc",
+      "order_by": "stock"
+    }
+  },
+  {
+    "instruction": "Show the  transactions where date between 2017-01-30 and 2017-09-16 and amount below 36 and date after 2015-07-21",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2017-01-30",
+            "2017-09-16"
+          ]
+        },
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 36
+        },
+        {
+          "field": "date",
+          "operator": ">",
+          "value": "2015-07-21"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where account_id not equal to 14 and type greater than 31",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 14
+        },
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 31
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where designation equal to 93 and designation not equal to 49 and hire_date after 2025-02-05",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 93
+        },
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 49
+        },
+        {
+          "field": "hire_date",
+          "operator": ">",
+          "value": "2025-02-05"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where balance greater than 14",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 14
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum products where category is grocery and price equal to 49",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "grocery"
+        },
+        {
+          "field": "price",
+          "operator": "=",
+          "value": 49
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where balance above 54",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 54
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where join_date between 2015-02-15 and 2015-09-28 and age not equal to 59 and city is Delhi",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2015-02-15",
+            "2015-09-28"
+          ]
+        },
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 59
+        },
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Delhi"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where account_id equal to 20 and type above 54 and account_id not equal to 90",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 20
+        },
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 54
+        },
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 90
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the count of accounts where open_date after 2024-05-25",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2024-05-25"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 10 transactions where type below 80 and account_id not equal to 50",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "type",
+          "operator": "<",
+          "value": 80
+        },
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 50
+        }
+      ],
+      "limit": 10,
+      "order": "desc",
+      "order_by": "type"
+    }
+  },
+  {
+    "instruction": "Show the  transactions where account_id greater than 14",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": ">",
+          "value": 14
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where age not equal to 75 and city is Delhi",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 75
+        },
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Delhi"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where membership_status is pending and total_spent less than 66 and membership_status is inactive",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "pending"
+        },
+        {
+          "field": "total_spent",
+          "operator": "<",
+          "value": 66
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "inactive"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total customers where join_date between 2024-06-21 and 2025-02-09 and city is Chennai and total_spent not equal to 48",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2024-06-21",
+            "2025-02-09"
+          ]
+        },
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Chennai"
+        },
+        {
+          "field": "total_spent",
+          "operator": "=",
+          "value": 48
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 5 transactions where date after 2024-04-06",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "date",
+          "operator": ">",
+          "value": "2024-04-06"
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "date"
+    }
+  },
+  {
+    "instruction": "Show the count of orders where customer_id below 17",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": "<",
+          "value": 17
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where order_date after 2024-01-22",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "order_date",
+          "operator": ">",
+          "value": "2024-01-22"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where balance less than 62 and branch greater than 46 and branch less than 49",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "balance",
+          "operator": "<",
+          "value": 62
+        },
+        {
+          "field": "branch",
+          "operator": ">",
+          "value": 46
+        },
+        {
+          "field": "branch",
+          "operator": "<",
+          "value": 49
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where category is toys and launch_date after 2016-12-22 and price greater than 86",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "toys"
+        },
+        {
+          "field": "launch_date",
+          "operator": ">",
+          "value": "2016-12-22"
+        },
+        {
+          "field": "price",
+          "operator": ">",
+          "value": 86
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where customer_id above 18 and status is completed",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": ">",
+          "value": 18
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "completed"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where region is Hyderabad",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Hyderabad"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 5 customers where membership_status is completed and membership_status is completed and membership_status is cancelled",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "completed"
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "completed"
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "cancelled"
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "membership_status"
+    }
+  },
+  {
+    "instruction": "Show the  employees where designation above 70",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": ">",
+          "value": 70
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the count of customers where join_date after 2016-12-08 and membership_status is active and total_spent equal to 13",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": ">",
+          "value": "2016-12-08"
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "active"
+        },
+        {
+          "field": "total_spent",
+          "operator": "=",
+          "value": 13
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where membership_status is inactive and membership_status is completed and total_spent equal to 37",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "inactive"
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "completed"
+        },
+        {
+          "field": "total_spent",
+          "operator": "=",
+          "value": 37
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total transactions where amount equal to 83 and account_id above 87 and account_id below 48",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "=",
+          "value": 83
+        },
+        {
+          "field": "account_id",
+          "operator": ">",
+          "value": 87
+        },
+        {
+          "field": "account_id",
+          "operator": "<",
+          "value": 48
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where designation not equal to 26 and salary above 86",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 26
+        },
+        {
+          "field": "salary",
+          "operator": ">",
+          "value": 86
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where membership_status is cancelled and membership_status is inactive",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "cancelled"
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "inactive"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum accounts where open_date after 2017-05-28 and branch greater than 34 and balance greater than 92",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2017-05-28"
+        },
+        {
+          "field": "branch",
+          "operator": ">",
+          "value": 34
+        },
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 92
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where open_date after 2015-07-30 and account_type not equal to 85 and balance greater than 96",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2015-07-30"
+        },
+        {
+          "field": "account_type",
+          "operator": "=",
+          "value": 85
+        },
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 96
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where account_id not equal to 79 and type below 33 and date between 2017-12-16 and 2018-06-09",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 79
+        },
+        {
+          "field": "type",
+          "operator": "<",
+          "value": 33
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2017-12-16",
+            "2018-06-09"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum employees where designation equal to 79 and hire_date between 2016-03-04 and 2016-05-20 and hire_date between 2018-09-27 and 2018-10-27",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 79
+        },
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2016-03-04",
+            "2016-05-20"
+          ]
+        },
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2018-09-27",
+            "2018-10-27"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where age less than 37 and age above 38",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 37
+        },
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 38
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum products where launch_date after 2024-04-26 and stock less than 31",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "launch_date",
+          "operator": ">",
+          "value": "2024-04-26"
+        },
+        {
+          "field": "stock",
+          "operator": "<",
+          "value": 31
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where amount less than 99 and customer_id equal to 80 and order_date between 2018-10-14 and 2019-07-24",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 99
+        },
+        {
+          "field": "customer_id",
+          "operator": "=",
+          "value": 80
+        },
+        {
+          "field": "order_date",
+          "operator": "between",
+          "value": [
+            "2018-10-14",
+            "2019-07-24"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where balance above 47 and open_date after 2024-05-15",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 47
+        },
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2024-05-15"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where type not equal to 86",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "type",
+          "operator": "=",
+          "value": 86
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where total_spent not equal to 71",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": "=",
+          "value": 71
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total products where category is toys",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "toys"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where department is Sales and salary not equal to 21 and department is Sales",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Sales"
+        },
+        {
+          "field": "salary",
+          "operator": "=",
+          "value": 21
+        },
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Sales"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 10 orders where status is active and region is Hyderabad",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "active"
+        },
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Hyderabad"
+        }
+      ],
+      "limit": 10,
+      "order": "desc",
+      "order_by": "status"
+    }
+  },
+  {
+    "instruction": "Show the  products where category is fashion and price less than 97",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "fashion"
+        },
+        {
+          "field": "price",
+          "operator": "<",
+          "value": 97
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where open_date between 2016-05-08 and 2017-01-28 and balance below 83 and branch equal to 64",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": "between",
+          "value": [
+            "2016-05-08",
+            "2017-01-28"
+          ]
+        },
+        {
+          "field": "balance",
+          "operator": "<",
+          "value": 83
+        },
+        {
+          "field": "branch",
+          "operator": "=",
+          "value": 64
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the average products where launch_date after 2024-12-20",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "launch_date",
+          "operator": ">",
+          "value": "2024-12-20"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum accounts where branch equal to 63 and account_type equal to 43 and balance equal to 36",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "branch",
+          "operator": "=",
+          "value": 63
+        },
+        {
+          "field": "account_type",
+          "operator": "=",
+          "value": 43
+        },
+        {
+          "field": "balance",
+          "operator": "=",
+          "value": 36
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 5 employees where age above 97",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 97
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "age"
+    }
+  },
+  {
+    "instruction": "Show the top 5 accounts where account_type below 69 and branch above 84 and branch below 28",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "account_type",
+          "operator": "<",
+          "value": 69
+        },
+        {
+          "field": "branch",
+          "operator": ">",
+          "value": 84
+        },
+        {
+          "field": "branch",
+          "operator": "<",
+          "value": 28
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "account_type"
+    }
+  },
+  {
+    "instruction": "Show the bottom 5 customers where total_spent above 91 and join_date after 2022-05-01",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": ">",
+          "value": 91
+        },
+        {
+          "field": "join_date",
+          "operator": ">",
+          "value": "2022-05-01"
+        }
+      ],
+      "limit": 5,
+      "order": "asc",
+      "order_by": "total_spent"
+    }
+  },
+  {
+    "instruction": "Show the  employees where age not equal to 45",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 45
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 5 employees where age above 40 and hire_date between 2025-11-09 and 2026-07-15",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 40
+        },
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2025-11-09",
+            "2026-07-15"
+          ]
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "age"
+    }
+  },
+  {
+    "instruction": "Show the  customers where city is Hyderabad",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Hyderabad"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the sum of accounts where branch equal to 72 and balance greater than 12",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "branch",
+          "operator": "=",
+          "value": 72
+        },
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 12
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where salary less than 39 and hire_date between 2019-12-11 and 2020-04-20 and designation not equal to 86",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "salary",
+          "operator": "<",
+          "value": 39
+        },
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2019-12-11",
+            "2020-04-20"
+          ]
+        },
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 86
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where age equal to 40 and membership_status is cancelled",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 40
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "cancelled"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where customer_id equal to 21",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": "=",
+          "value": 21
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where status is pending and customer_id below 85 and amount not equal to 85",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "pending"
+        },
+        {
+          "field": "customer_id",
+          "operator": "<",
+          "value": 85
+        },
+        {
+          "field": "amount",
+          "operator": "=",
+          "value": 85
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where type above 53 and date after 2025-06-10",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 53
+        },
+        {
+          "field": "date",
+          "operator": ">",
+          "value": "2025-06-10"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the bottom 5 employees where salary not equal to 92 and department is Marketing and hire_date between 2023-01-04 and 2023-07-23",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "salary",
+          "operator": "=",
+          "value": 92
+        },
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Marketing"
+        },
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2023-01-04",
+            "2023-07-23"
+          ]
+        }
+      ],
+      "limit": 5,
+      "order": "asc",
+      "order_by": "salary"
+    }
+  },
+  {
+    "instruction": "Show the  orders where status is pending and customer_id below 76 and region is Bangalore",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "pending"
+        },
+        {
+          "field": "customer_id",
+          "operator": "<",
+          "value": 76
+        },
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Bangalore"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the count of products where price not equal to 87",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": "=",
+          "value": 87
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum orders where customer_id greater than 78",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": ">",
+          "value": 78
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the sum of customers where total_spent equal to 43 and membership_status is pending and age less than 82",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": "=",
+          "value": 43
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "pending"
+        },
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 82
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 5 orders where amount above 40",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": ">",
+          "value": 40
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "amount"
+    }
+  },
+  {
+    "instruction": "Show the minimum transactions where account_id equal to 95 and amount greater than 65",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 95
+        },
+        {
+          "field": "amount",
+          "operator": ">",
+          "value": 65
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 10 customers where membership_status is cancelled",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "cancelled"
+        }
+      ],
+      "limit": 10,
+      "order": "desc",
+      "order_by": "membership_status"
+    }
+  },
+  {
+    "instruction": "Show the  employees where age below 46 and department is HR and age less than 89",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 46
+        },
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "HR"
+        },
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 89
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where age greater than 26 and designation above 65",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 26
+        },
+        {
+          "field": "designation",
+          "operator": ">",
+          "value": 65
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 5 orders where status is cancelled and region is Mumbai and region is Bangalore",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "cancelled"
+        },
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Mumbai"
+        },
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Bangalore"
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "status"
+    }
+  },
+  {
+    "instruction": "Show the total customers where join_date between 2025-05-23 and 2025-06-25 and city is Chennai",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2025-05-23",
+            "2025-06-25"
+          ]
+        },
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Chennai"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where total_spent less than 87 and join_date after 2018-04-03",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": "<",
+          "value": 87
+        },
+        {
+          "field": "join_date",
+          "operator": ">",
+          "value": "2018-04-03"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where amount below 29",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 29
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum orders where amount less than 79",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 79
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where type less than 17 and type above 96",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "type",
+          "operator": "<",
+          "value": 17
+        },
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 96
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum accounts where open_date between 2022-07-28 and 2023-03-12",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": "between",
+          "value": [
+            "2022-07-28",
+            "2023-03-12"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where hire_date between 2024-03-02 and 2024-12-12 and department is Sales and department is Sales",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2024-03-02",
+            "2024-12-12"
+          ]
+        },
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Sales"
+        },
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Sales"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum orders where region is Mumbai and amount above 12 and status is active",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Mumbai"
+        },
+        {
+          "field": "amount",
+          "operator": ">",
+          "value": 12
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "active"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 10 transactions where amount below 91 and account_id above 75",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 91
+        },
+        {
+          "field": "account_id",
+          "operator": ">",
+          "value": 75
+        }
+      ],
+      "limit": 10,
+      "order": "desc",
+      "order_by": "amount"
+    }
+  },
+  {
+    "instruction": "Show the  orders where customer_id below 61",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": "<",
+          "value": 61
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where total_spent less than 77 and total_spent not equal to 56",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": "<",
+          "value": 77
+        },
+        {
+          "field": "total_spent",
+          "operator": "=",
+          "value": 56
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the sum of customers where join_date after 2018-05-11",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": ">",
+          "value": "2018-05-11"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where salary equal to 57",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "salary",
+          "operator": "=",
+          "value": 57
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 5 products where category is toys and category is grocery",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "toys"
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "grocery"
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "category"
+    }
+  },
+  {
+    "instruction": "Show the  orders where region is Chennai and region is Hyderabad and status is inactive",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Chennai"
+        },
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Hyderabad"
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "inactive"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where age greater than 13 and membership_status is cancelled and age equal to 17",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 13
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "cancelled"
+        },
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 17
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where price less than 64 and category is grocery and category is electronics",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": "<",
+          "value": 64
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "grocery"
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "electronics"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the average employees where salary equal to 29",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "salary",
+          "operator": "=",
+          "value": 29
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the average employees where department is HR",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "HR"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total accounts where account_type greater than 41 and open_date after 2024-12-04",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "account_type",
+          "operator": ">",
+          "value": 41
+        },
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2024-12-04"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where department is Sales and age above 44 and age equal to 24",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Sales"
+        },
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 44
+        },
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 24
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where type above 37 and account_id below 13",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 37
+        },
+        {
+          "field": "account_id",
+          "operator": "<",
+          "value": 13
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where total_spent equal to 77 and city is Delhi and membership_status is inactive",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": "=",
+          "value": 77
+        },
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Delhi"
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "inactive"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 10 employees where age above 67 and age below 74 and hire_date between 2017-11-25 and 2018-03-15",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 67
+        },
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 74
+        },
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2017-11-25",
+            "2018-03-15"
+          ]
+        }
+      ],
+      "limit": 10,
+      "order": "desc",
+      "order_by": "age"
+    }
+  },
+  {
+    "instruction": "Show the  orders where region is Bangalore",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Bangalore"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the average transactions where date after 2023-05-23 and amount greater than 94 and date between 2019-05-24 and 2019-12-22",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "date",
+          "operator": ">",
+          "value": "2023-05-23"
+        },
+        {
+          "field": "amount",
+          "operator": ">",
+          "value": 94
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2019-05-24",
+            "2019-12-22"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum employees where designation equal to 76",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 76
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where age below 62 and salary equal to 50 and age less than 51",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 62
+        },
+        {
+          "field": "salary",
+          "operator": "=",
+          "value": 50
+        },
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 51
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where branch below 66",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "branch",
+          "operator": "<",
+          "value": 66
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where status is completed and order_date after 2025-10-29 and amount greater than 50",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "completed"
+        },
+        {
+          "field": "order_date",
+          "operator": ">",
+          "value": "2025-10-29"
+        },
+        {
+          "field": "amount",
+          "operator": ">",
+          "value": 50
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where membership_status is active",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "active"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where launch_date after 2017-04-26",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "launch_date",
+          "operator": ">",
+          "value": "2017-04-26"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 5 employees where hire_date between 2015-10-10 and 2015-11-11 and hire_date after 2021-12-17 and hire_date between 2020-05-14 and 2020-10-06",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2015-10-10",
+            "2015-11-11"
+          ]
+        },
+        {
+          "field": "hire_date",
+          "operator": ">",
+          "value": "2021-12-17"
+        },
+        {
+          "field": "hire_date",
+          "operator": "between",
+          "value": [
+            "2020-05-14",
+            "2020-10-06"
+          ]
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "hire_date"
+    }
+  },
+  {
+    "instruction": "Show the  orders where status is completed and amount less than 15",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "completed"
+        },
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 15
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where branch above 57",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "branch",
+          "operator": ">",
+          "value": 57
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where age greater than 22 and department is Engineering",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 22
+        },
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Engineering"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where designation greater than 24 and designation greater than 100",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": ">",
+          "value": 24
+        },
+        {
+          "field": "designation",
+          "operator": ">",
+          "value": 100
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where amount below 11",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 11
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where branch above 61 and balance greater than 12 and account_type less than 99",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "branch",
+          "operator": ">",
+          "value": 61
+        },
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 12
+        },
+        {
+          "field": "account_type",
+          "operator": "<",
+          "value": 99
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where region is Pune",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Pune"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum transactions where amount below 81 and date between 2018-05-05 and 2018-07-20 and account_id not equal to 39",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 81
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2018-05-05",
+            "2018-07-20"
+          ]
+        },
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 39
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where customer_id below 26",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": "<",
+          "value": 26
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where price equal to 51 and category is furniture",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": "=",
+          "value": 51
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "furniture"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where category is grocery and stock less than 16 and category is electronics",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "grocery"
+        },
+        {
+          "field": "stock",
+          "operator": "<",
+          "value": 16
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "electronics"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where salary above 65 and age above 26",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "salary",
+          "operator": ">",
+          "value": 65
+        },
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 26
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 10 orders where amount less than 92 and order_date between 2017-04-02 and 2017-06-09",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 92
+        },
+        {
+          "field": "order_date",
+          "operator": "between",
+          "value": [
+            "2017-04-02",
+            "2017-06-09"
+          ]
+        }
+      ],
+      "limit": 10,
+      "order": "desc",
+      "order_by": "amount"
+    }
+  },
+  {
+    "instruction": "Show the sum of transactions where account_id below 39 and date after 2024-10-27",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "<",
+          "value": 39
+        },
+        {
+          "field": "date",
+          "operator": ">",
+          "value": "2024-10-27"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum customers where age greater than 37 and city is Delhi and join_date between 2021-10-16 and 2022-02-06",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 37
+        },
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Delhi"
+        },
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2021-10-16",
+            "2022-02-06"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where branch below 24 and open_date after 2016-12-28 and balance above 43",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "branch",
+          "operator": "<",
+          "value": 24
+        },
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2016-12-28"
+        },
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 43
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where age above 73",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 73
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where amount equal to 50 and amount below 97 and order_date after 2021-03-22",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "=",
+          "value": 50
+        },
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 97
+        },
+        {
+          "field": "order_date",
+          "operator": ">",
+          "value": "2021-03-22"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where account_type not equal to 60 and balance above 55",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "account_type",
+          "operator": "=",
+          "value": 60
+        },
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 55
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where designation less than 54 and department is Engineering",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": "<",
+          "value": 54
+        },
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Engineering"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where region is Delhi and status is cancelled and order_date after 2017-09-24",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Delhi"
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "cancelled"
+        },
+        {
+          "field": "order_date",
+          "operator": ">",
+          "value": "2017-09-24"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where salary above 21 and age equal to 22 and designation above 72",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "salary",
+          "operator": ">",
+          "value": 21
+        },
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 22
+        },
+        {
+          "field": "designation",
+          "operator": ">",
+          "value": 72
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum customers where city is Chennai and age less than 18",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Chennai"
+        },
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 18
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where status is pending",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "pending"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where category is furniture and category is fashion",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "furniture"
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "fashion"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where age greater than 84 and total_spent greater than 14",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 84
+        },
+        {
+          "field": "total_spent",
+          "operator": ">",
+          "value": 14
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where amount above 39",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": ">",
+          "value": 39
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where designation less than 18 and age above 14 and department is Engineering",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": "<",
+          "value": 18
+        },
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 14
+        },
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "Engineering"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where balance greater than 83 and branch above 25 and account_type above 62",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 83
+        },
+        {
+          "field": "branch",
+          "operator": ">",
+          "value": 25
+        },
+        {
+          "field": "account_type",
+          "operator": ">",
+          "value": 62
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total orders where region is Pune and status is active and region is Delhi",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Pune"
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "active"
+        },
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Delhi"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where join_date between 2017-05-05 and 2017-09-03 and join_date between 2020-07-12 and 2020-08-10",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2017-05-05",
+            "2017-09-03"
+          ]
+        },
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2020-07-12",
+            "2020-08-10"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where balance greater than 32 and branch equal to 48",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 32
+        },
+        {
+          "field": "branch",
+          "operator": "=",
+          "value": 48
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where account_id above 10",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": ">",
+          "value": 10
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where region is Hyderabad",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Hyderabad"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the average products where launch_date after 2016-06-01",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "launch_date",
+          "operator": ">",
+          "value": "2016-06-01"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where total_spent less than 100 and total_spent not equal to 17",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": "<",
+          "value": 100
+        },
+        {
+          "field": "total_spent",
+          "operator": "=",
+          "value": 17
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the average accounts where open_date between 2016-08-31 and 2016-10-24 and balance less than 46",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": "between",
+          "value": [
+            "2016-08-31",
+            "2016-10-24"
+          ]
+        },
+        {
+          "field": "balance",
+          "operator": "<",
+          "value": 46
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where status is inactive",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "inactive"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total transactions where account_id greater than 83 and account_id greater than 59 and date after 2025-09-11",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": ">",
+          "value": 83
+        },
+        {
+          "field": "account_id",
+          "operator": ">",
+          "value": 59
+        },
+        {
+          "field": "date",
+          "operator": ">",
+          "value": "2025-09-11"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where join_date between 2017-01-12 and 2017-05-07",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2017-01-12",
+            "2017-05-07"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where account_id equal to 53 and date between 2016-05-26 and 2016-07-18 and date between 2025-07-28 and 2025-10-25",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 53
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2016-05-26",
+            "2016-07-18"
+          ]
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2025-07-28",
+            "2025-10-25"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the bottom 5 products where category is furniture",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "furniture"
+        }
+      ],
+      "limit": 5,
+      "order": "asc",
+      "order_by": "category"
+    }
+  },
+  {
+    "instruction": "Show the  customers where join_date after 2021-10-31",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": ">",
+          "value": "2021-10-31"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 10 orders where order_date between 2022-12-22 and 2023-04-08 and amount above 39 and amount below 35",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "order_date",
+          "operator": "between",
+          "value": [
+            "2022-12-22",
+            "2023-04-08"
+          ]
+        },
+        {
+          "field": "amount",
+          "operator": ">",
+          "value": 39
+        },
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 35
+        }
+      ],
+      "limit": 10,
+      "order": "desc",
+      "order_by": "order_date"
+    }
+  },
+  {
+    "instruction": "Show the  products where stock not equal to 62",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "stock",
+          "operator": "=",
+          "value": 62
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where account_id greater than 95 and date after 2016-07-03 and amount equal to 72",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": ">",
+          "value": 95
+        },
+        {
+          "field": "date",
+          "operator": ">",
+          "value": "2016-07-03"
+        },
+        {
+          "field": "amount",
+          "operator": "=",
+          "value": 72
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where branch less than 53 and account_type below 63",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "branch",
+          "operator": "<",
+          "value": 53
+        },
+        {
+          "field": "account_type",
+          "operator": "<",
+          "value": 63
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where amount less than 85 and date between 2023-01-30 and 2023-09-02 and amount not equal to 34",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 85
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2023-01-30",
+            "2023-09-02"
+          ]
+        },
+        {
+          "field": "amount",
+          "operator": "=",
+          "value": 34
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where age above 42 and designation below 26",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 42
+        },
+        {
+          "field": "designation",
+          "operator": "<",
+          "value": 26
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where age not equal to 27 and designation equal to 21",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 27
+        },
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 21
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the sum of customers where city is Hyderabad",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Hyderabad"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 10 orders where order_date after 2019-04-11 and customer_id greater than 59 and status is cancelled",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "order_date",
+          "operator": ">",
+          "value": "2019-04-11"
+        },
+        {
+          "field": "customer_id",
+          "operator": ">",
+          "value": 59
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "cancelled"
+        }
+      ],
+      "limit": 10,
+      "order": "desc",
+      "order_by": "order_date"
+    }
+  },
+  {
+    "instruction": "Show the  products where price above 58 and category is furniture",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": ">",
+          "value": 58
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "furniture"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where launch_date between 2022-06-13 and 2022-08-10 and launch_date after 2023-08-13",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2022-06-13",
+            "2022-08-10"
+          ]
+        },
+        {
+          "field": "launch_date",
+          "operator": ">",
+          "value": "2023-08-13"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the sum of products where stock less than 41",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "stock",
+          "operator": "<",
+          "value": 41
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the sum of customers where total_spent below 94 and age above 42",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": "<",
+          "value": 94
+        },
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 42
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where type equal to 12 and date between 2015-01-05 and 2015-09-20 and type greater than 21",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "type",
+          "operator": "=",
+          "value": 12
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2015-01-05",
+            "2015-09-20"
+          ]
+        },
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 21
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the top 5 products where category is furniture and stock not equal to 96 and price below 46",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "furniture"
+        },
+        {
+          "field": "stock",
+          "operator": "=",
+          "value": 96
+        },
+        {
+          "field": "price",
+          "operator": "<",
+          "value": 46
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "category"
+    }
+  },
+  {
+    "instruction": "Show the bottom 5 employees where salary not equal to 95",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "salary",
+          "operator": "=",
+          "value": 95
+        }
+      ],
+      "limit": 5,
+      "order": "asc",
+      "order_by": "salary"
+    }
+  },
+  {
+    "instruction": "Show the  products where price less than 69",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": "<",
+          "value": 69
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where membership_status is pending and join_date between 2018-11-19 and 2019-05-16 and age greater than 55",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "pending"
+        },
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2018-11-19",
+            "2019-05-16"
+          ]
+        },
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 55
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where date between 2018-09-17 and 2019-07-01 and account_id greater than 27 and type greater than 98",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2018-09-17",
+            "2019-07-01"
+          ]
+        },
+        {
+          "field": "account_id",
+          "operator": ">",
+          "value": 27
+        },
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 98
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum transactions where type greater than 94 and account_id not equal to 88",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 94
+        },
+        {
+          "field": "account_id",
+          "operator": "=",
+          "value": 88
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where customer_id below 84",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": "<",
+          "value": 84
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum customers where join_date after 2017-09-29 and total_spent not equal to 10 and total_spent greater than 37",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": ">",
+          "value": "2017-09-29"
+        },
+        {
+          "field": "total_spent",
+          "operator": "=",
+          "value": 10
+        },
+        {
+          "field": "total_spent",
+          "operator": ">",
+          "value": 37
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where open_date after 2020-08-02 and open_date between 2019-07-03 and 2019-09-22 and account_type less than 55",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2020-08-02"
+        },
+        {
+          "field": "open_date",
+          "operator": "between",
+          "value": [
+            "2019-07-03",
+            "2019-09-22"
+          ]
+        },
+        {
+          "field": "account_type",
+          "operator": "<",
+          "value": 55
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum products where stock not equal to 100 and launch_date between 2025-10-26 and 2026-03-03",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "stock",
+          "operator": "=",
+          "value": 100
+        },
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2025-10-26",
+            "2026-03-03"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum employees where age below 26 and department is HR and designation greater than 96",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "<",
+          "value": 26
+        },
+        {
+          "field": "department",
+          "operator": "=",
+          "value": "HR"
+        },
+        {
+          "field": "designation",
+          "operator": ">",
+          "value": 96
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the bottom 5 transactions where account_id less than 29",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "<",
+          "value": 29
+        }
+      ],
+      "limit": 5,
+      "order": "asc",
+      "order_by": "account_id"
+    }
+  },
+  {
+    "instruction": "Show the top 5 products where launch_date after 2017-05-30",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "launch_date",
+          "operator": ">",
+          "value": "2017-05-30"
+        }
+      ],
+      "limit": 5,
+      "order": "desc",
+      "order_by": "launch_date"
+    }
+  },
+  {
+    "instruction": "Show the top 10 orders where status is pending",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "pending"
+        }
+      ],
+      "limit": 10,
+      "order": "desc",
+      "order_by": "status"
+    }
+  },
+  {
+    "instruction": "Show the average accounts where account_type greater than 36",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "account_type",
+          "operator": ">",
+          "value": 36
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where category is electronics and price not equal to 54 and launch_date between 2020-12-24 and 2021-01-23",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "electronics"
+        },
+        {
+          "field": "price",
+          "operator": "=",
+          "value": 54
+        },
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2020-12-24",
+            "2021-01-23"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where branch below 31",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "branch",
+          "operator": "<",
+          "value": 31
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where customer_id not equal to 80",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": "=",
+          "value": 80
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total employees where hire_date after 2021-03-17",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "hire_date",
+          "operator": ">",
+          "value": "2021-03-17"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where order_date after 2015-02-05 and status is cancelled",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "order_date",
+          "operator": ">",
+          "value": "2015-02-05"
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "cancelled"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total orders where amount less than 65 and status is pending",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 65
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "pending"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where category is grocery and stock greater than 86",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "grocery"
+        },
+        {
+          "field": "stock",
+          "operator": ">",
+          "value": 86
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where order_date after 2022-05-15 and customer_id equal to 99 and status is pending",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "order_date",
+          "operator": ">",
+          "value": "2022-05-15"
+        },
+        {
+          "field": "customer_id",
+          "operator": "=",
+          "value": 99
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "pending"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the sum of products where category is toys",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "toys"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum customers where age equal to 76",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 76
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where region is Hyderabad and order_date between 2025-07-09 and 2026-02-08 and amount equal to 81",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Hyderabad"
+        },
+        {
+          "field": "order_date",
+          "operator": "between",
+          "value": [
+            "2025-07-09",
+            "2026-02-08"
+          ]
+        },
+        {
+          "field": "amount",
+          "operator": "=",
+          "value": 81
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where amount less than 62 and date between 2015-07-27 and 2016-03-19 and type equal to 10",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 62
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2015-07-27",
+            "2016-03-19"
+          ]
+        },
+        {
+          "field": "type",
+          "operator": "=",
+          "value": 10
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the average accounts where open_date after 2020-01-29 and balance less than 90",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "open_date",
+          "operator": ">",
+          "value": "2020-01-29"
+        },
+        {
+          "field": "balance",
+          "operator": "<",
+          "value": 90
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where type greater than 84 and date between 2018-02-15 and 2018-09-14 and amount equal to 37",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "type",
+          "operator": ">",
+          "value": 84
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2018-02-15",
+            "2018-09-14"
+          ]
+        },
+        {
+          "field": "amount",
+          "operator": "=",
+          "value": 37
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the sum of customers where join_date after 2018-08-01 and join_date between 2024-12-31 and 2025-06-04",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "join_date",
+          "operator": ">",
+          "value": "2018-08-01"
+        },
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2024-12-31",
+            "2025-06-04"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where price above 69",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": ">",
+          "value": 69
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where city is Hyderabad and age greater than 86",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Hyderabad"
+        },
+        {
+          "field": "age",
+          "operator": ">",
+          "value": 86
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  products where category is toys and launch_date between 2020-01-27 and 2020-08-18 and category is fashion",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "toys"
+        },
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2020-01-27",
+            "2020-08-18"
+          ]
+        },
+        {
+          "field": "category",
+          "operator": "=",
+          "value": "fashion"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  employees where designation greater than 26 and salary less than 73 and designation equal to 62",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "designation",
+          "operator": ">",
+          "value": 26
+        },
+        {
+          "field": "salary",
+          "operator": "<",
+          "value": 73
+        },
+        {
+          "field": "designation",
+          "operator": "=",
+          "value": 62
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where customer_id above 96 and region is Pune",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "customer_id",
+          "operator": ">",
+          "value": 96
+        },
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Pune"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum employees where age not equal to 87",
+    "response": {
+      "entity": "employees",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": "=",
+          "value": 87
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the maximum orders where amount equal to 27 and status is pending and region is Bangalore",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "=",
+          "value": 27
+        },
+        {
+          "field": "status",
+          "operator": "=",
+          "value": "pending"
+        },
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Bangalore"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where total_spent below 18",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": "<",
+          "value": 18
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the bottom 5 customers where city is Chennai and join_date between 2023-05-30 and 2024-01-02",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Chennai"
+        },
+        {
+          "field": "join_date",
+          "operator": "between",
+          "value": [
+            "2023-05-30",
+            "2024-01-02"
+          ]
+        }
+      ],
+      "limit": 5,
+      "order": "asc",
+      "order_by": "city"
+    }
+  },
+  {
+    "instruction": "Show the  products where price less than 38 and launch_date between 2020-11-27 and 2021-04-01",
+    "response": {
+      "entity": "products",
+      "conditions": [
+        {
+          "field": "price",
+          "operator": "<",
+          "value": 38
+        },
+        {
+          "field": "launch_date",
+          "operator": "between",
+          "value": [
+            "2020-11-27",
+            "2021-04-01"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where total_spent greater than 76",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "total_spent",
+          "operator": ">",
+          "value": 76
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  customers where city is Delhi and membership_status is pending",
+    "response": {
+      "entity": "customers",
+      "conditions": [
+        {
+          "field": "city",
+          "operator": "=",
+          "value": "Delhi"
+        },
+        {
+          "field": "membership_status",
+          "operator": "=",
+          "value": "pending"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the minimum transactions where date between 2023-03-15 and 2023-09-02",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2023-03-15",
+            "2023-09-02"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the count of accounts where account_type not equal to 61",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "account_type",
+          "operator": "=",
+          "value": 61
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total transactions where type not equal to 66 and date between 2020-04-23 and 2020-11-25",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "type",
+          "operator": "=",
+          "value": 66
+        },
+        {
+          "field": "date",
+          "operator": "between",
+          "value": [
+            "2020-04-23",
+            "2020-11-25"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the count of orders where amount not equal to 77",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "amount",
+          "operator": "=",
+          "value": 77
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  transactions where account_id greater than 16 and amount below 69 and type less than 36",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": ">",
+          "value": 16
+        },
+        {
+          "field": "amount",
+          "operator": "<",
+          "value": 69
+        },
+        {
+          "field": "type",
+          "operator": "<",
+          "value": 36
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  accounts where account_type less than 78 and balance greater than 41",
+    "response": {
+      "entity": "accounts",
+      "conditions": [
+        {
+          "field": "account_type",
+          "operator": "<",
+          "value": 78
+        },
+        {
+          "field": "balance",
+          "operator": ">",
+          "value": 41
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where region is Bangalore and order_date after 2020-01-05 and order_date after 2019-08-14",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "region",
+          "operator": "=",
+          "value": "Bangalore"
+        },
+        {
+          "field": "order_date",
+          "operator": ">",
+          "value": "2020-01-05"
+        },
+        {
+          "field": "order_date",
+          "operator": ">",
+          "value": "2019-08-14"
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the total transactions where account_id below 42 and type less than 31",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "<",
+          "value": 42
+        },
+        {
+          "field": "type",
+          "operator": "<",
+          "value": 31
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the average transactions where account_id below 82",
+    "response": {
+      "entity": "transactions",
+      "conditions": [
+        {
+          "field": "account_id",
+          "operator": "<",
+          "value": 82
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Show the  orders where order_date between 2021-12-02 and 2022-01-30",
+    "response": {
+      "entity": "orders",
+      "conditions": [
+        {
+          "field": "order_date",
+          "operator": "between",
+          "value": [
+            "2021-12-02",
+            "2022-01-30"
+          ]
+        }
+      ]
+    }
+  }
+]
